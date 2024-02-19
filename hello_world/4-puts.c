@@ -2,9 +2,7 @@
 
 /**
  * main - Entry point
-
  * puts - Function used to print "Programming is like building a multilingual puzzle 
-
  * Return: Always 0 (Success)
  */
 
