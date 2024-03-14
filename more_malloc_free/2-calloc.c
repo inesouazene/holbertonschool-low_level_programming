@@ -20,10 +20,12 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	concat = malloc(nmemb * size);
 
+	if (concat == NULL)
+		return (NULL);
+
 	for (index = 0; index < (nmemb * size); index++)
 	{
 		concat[index] = 0;
 		return (concat);
 	}
-	return (NULL);
 }
