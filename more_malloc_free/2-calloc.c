@@ -26,6 +26,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	for (index = 0; index < (nmemb * size); index++)
 	{
 		concat[index] = 0;
-		return (concat);
 	}
+	return (concat);
 }
