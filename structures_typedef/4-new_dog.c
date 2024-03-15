@@ -20,28 +20,39 @@ int _strlen(char *s)
 }
 
 /**
-* _strcpy - function that copies the string pointed to by src
-* @dest: string destination
-* @src: string source
-*
-* Return: pointer to dest
+* _strdup - function that returns a pointer to a newly allocated space
+* in memory, which contains a copy of the string given as a parameter.
+* @str: string to copy
+* Return: a pointer to the duplicated string, or NULL
 */
 
-char *_strcpy(char *dest, char *src)
+char *_strdup(char *str)
 {
-
-	int num_char;
 	int index;
+	int c = 0;
+	char *tab;
 
-	for (num_char = 0; src[num_char] != '\0'; num_char++)
+	if (str == NULL)
 	{
+		return (NULL);
 	}
-	for (index = 0; index < num_char; index++)
+	while (str[c] != '\0')
 	{
-		dest[index] = src[index];
+		c++;
 	}
 
-	return (dest);
+	tab = malloc(c + 1 * sizeof(char));
+
+	if (tab == NULL)
+	{
+		return (NULL);
+	}
+
+	for (index = 0; index < c; index++)
+		{
+		tab[index] = str[index];
+		}
+		return (tab);
 }
 
 /**
@@ -80,8 +91,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 			return (NULL);
 		}
 
-	_strcpy(newdog->name, name);
-	_strcpy(newdog->owner, owner);
+	_strdup(name);
+	_strdup(owner);
 	newdog->age = age;
 
 return (newdog);
