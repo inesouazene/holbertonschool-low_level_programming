@@ -9,27 +9,27 @@
 
 char *_strdup(char *str)
 {
-	int index;
-	int c = 0;
+	unsigned int index;
+	unsigned int size = 0;
 	char *tab;
 
 	if (str == NULL)
 	{
 		return (NULL);
 	}
-	while (str[c] != '\0')
+	while (str[size] != '\0')
 	{
-		c++;
+		size++;
 	}
 
-	tab = malloc(c + 1 * sizeof(char));
+	tab = malloc(size * sizeof(unsigned char));
 
 	if (tab == NULL)
 	{
 		return (NULL);
 	}
 
-	for (index = 0; index < c; index++)
+	for (index = 0; index < size; index++)
 		{
 		tab[index] = str[index];
 		}
