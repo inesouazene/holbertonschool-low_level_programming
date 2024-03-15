@@ -55,12 +55,9 @@ char *_strcpy(char *dest, char *src)
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *newdog;
-	int length_name, length_owner;
-	length_name = 0;
-	length_owner = 0;
-
-	newdog = malloc(sizeof(dog_t));
+	dog_t *newdog = malloc(sizeof(dog_t));
+	int length_name = 0;
+	int length_owner = 0;
 
 	if (name == NULL || owner == NULL)
 	{
