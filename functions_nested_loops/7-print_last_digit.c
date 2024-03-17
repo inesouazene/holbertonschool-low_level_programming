@@ -20,8 +20,8 @@ int _abs(int n)
 }
 
 /**
-* print_last_digit - function that  prints the last digit of a number.
-*
+* print_last_digit - function that prints the last digit of a number.
+* @num: int to get the last digit of
 * Return: the value of the last digit
 */
 
