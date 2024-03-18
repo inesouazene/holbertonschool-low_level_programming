@@ -8,8 +8,4 @@ Tasks :
 
 2-int_index.c > Write a function that searches for an integer.
 
-3-main.c,
-3-op_functions.c,
-3-get_op_func.c,
-3-calc.h
-> Write a program that performs simple operations.
+3-main.c, 3-op_functions.c, 3-get_op_func.c, 3-calc.h > Write a program that performs simple operations.
