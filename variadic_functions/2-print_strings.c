@@ -19,7 +19,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		str_arg = va_arg(list_arg, char *);
 
-		if (index > 0 && separator != NULL )
+		if (index > 0 && separator != NULL)
 		{
 			printf("%s", separator);
 		}
