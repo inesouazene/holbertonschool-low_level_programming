@@ -1,2 +1,2 @@
-# Ignorer tous les fichiers *-main.c
+# Ignorer tous les fichiers se terminant par *-main.c
 *-main.c
