@@ -4,9 +4,9 @@
 * _atoi - function that convert a string to an integer.
 * @s: string to convert
 *
-* Return : converted integer
+* Return: the int converted from the string,
+* Or 0 if the conversion fails
 */
-
 int _atoi(char *s)
 {
 	int index, negSign_count, n, length, flag, digit;
