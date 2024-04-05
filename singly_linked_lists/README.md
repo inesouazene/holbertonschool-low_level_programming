@@ -71,6 +71,3 @@ Prototype: void free_list(list_t *head);
 
 ***File***: 4-free_list.c
 
-
-
-
