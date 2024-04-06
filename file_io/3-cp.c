@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * create_buffer - Allocates 1024 bytes for a buffer.
  * @file: The name of the file buffer is storing chars for.
@@ -21,7 +20,6 @@ char *create_buffer(char *file)
 
 	return (buffer);
 }
-
 /**
  * close_file - Closes file descriptors.
  * @fd: The file descriptor to be closed.
@@ -38,7 +36,6 @@ void close_file(int fd)
 		exit(100);
 	}
 }
-
 /**
  * main - Copies the contents of a file to another file.
  * @argc: The number of arguments supplied to the program.
@@ -61,7 +58,6 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-
 	buffer = create_buffer(argv[2]);
 	from = open(argv[1], O_RDONLY);
 	r = read(from, buffer, 1024);
