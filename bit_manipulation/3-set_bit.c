@@ -1,4 +1,5 @@
 #include "main.h"
+#include "2-get_bit.c"
 
 /**
  * set_bit - Function that sets the value
@@ -10,16 +11,10 @@
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	unsigned long int position;
-
-	if (index > 64)
+	if (index > 32)
 		return (-1);
-
-	for (position = 1; index > 0; index--, position *= 2)
-	{
-
-	}
-	*n += position;
-
-	return (1);
+	(*n) |= 1 << index;
+	if (get_bit((*n), index) == 1)
+		return (1);
+	return (-1);
 }
