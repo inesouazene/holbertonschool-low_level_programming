@@ -11,7 +11,7 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int decimal_value, power;
+	unsigned int decimal_val, power;
 	int length;
 
 	if (b == NULL)
@@ -23,11 +23,11 @@ unsigned int binary_to_uint(const char *b)
 			return (0);
 	}
 
-	for (power = 1, decimal_value = 0, length--; length >= 0; length--, power *= 2)
+	for (power = 1, decimal_val = 0, length--; length >= 0; length--, power *= 2)
 	{
 		if (b[length] == '1')
-			decimal_value += power;
+			decimal_val += power;
 	}
 
-	return (decimal_value);
+	return (decimal_val);
 }
