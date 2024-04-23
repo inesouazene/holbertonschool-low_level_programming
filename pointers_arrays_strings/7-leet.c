@@ -8,21 +8,20 @@
  */
 char *leet(char *s)
 {
-	int index, leet_index;
+	char alphaArr[] = "a4A4e3E3o0O0t7T7l1L1";
+	int str_index;
+	int leet_index;
 
-	char *a = "aAeEoOtTlL";
-	char *b = "4433007711";
-
-	for (index = 0; s[index] != '\0'; index++)
+	for (str_index = 0; s[str_index] != '\0'; str_index++)
 	{
-		for (index = 0; leet_index < 10; leet_index++)
+		for (leet_index = 0; alphaArr[leet_index] != '\0'; leet_index++)
 		{
-			if (s[index] == a[leet_index])
+			if (s[str_index] == alphaArr[leet_index])
 			{
-				s[index] = b[leet_index];
+				s[str_index] = alphaArr[leet_index + 1];
+				break;
 			}
 		}
 	}
-
 	return (s);
 }
